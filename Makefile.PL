@@ -1,6 +1,6 @@
 use inc::Module::Install;
 
-name     'RT-Sample-YAPC2010';
+RTx 'RT-Sample-YAPC2010';
 all_from 'lib/RT/Sample/YAPC2010.pm';
 author   q{Kevin Falcone <falcone@bestpractical.com>};
 license  'gplv2';
