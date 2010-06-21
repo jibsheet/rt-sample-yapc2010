@@ -6,10 +6,18 @@ use warnings;
 use strict;
 use Carp;
 
+package RT::Interface::Web;
+no warnings 'redefine';
+sub WebCanonicalizeInfo {
+    my $user = $ENV{REMOTE_USER};
+    $user =~ s/\@FOOCorp\.com//i;
+    return $user;
+}
+
 
 =head1 NAME
 
-RT::Sample::YAPC2010 - [One line description of module's purpose here]
+RT::Sample::YAPC2010 - Sample module for a talk at YAPC::NA::2010
 
 =head1 BUGS AND LIMITATIONS
 
