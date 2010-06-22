@@ -17,6 +17,7 @@ meta-spec:
 name: RT-Sample-YAPC2010
 no_index:
   directory:
+    - etc
     - html
     - inc
 requires:
