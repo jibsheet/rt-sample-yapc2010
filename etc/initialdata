@@ -1,7 +1,7 @@
 @Queues = ( { Name => 'Sales' } );
 @CustomFields = (
     {
-        Name        => 'Advisor',
+        Name        => 'Department',
         Type        => 'FreeformSingle',
         Queue       => 0,
         Disabled    => 0,
