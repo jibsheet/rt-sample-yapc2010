@@ -1,0 +1,22 @@
+<%INIT>
+use File::Basename;
+my $arg = $m->dhandler_arg;
+my $file = dirname($m->current_comp->source_file) . '/real/' . $arg;
+return $m->decline unless -f $file && -r _;
+
+my $suffix = $1 if $file =~ /([^.]+)$/;
+
+my $type = {qw(
+    xml     text/xml
+    html    text/html
+    js      application/javascript
+    css     text/css
+    gif     image/gif
+    jpg     image/jpeg
+    png     image/png
+)}->{$suffix} || 'application/octet-stream';
+
+RT::Interface::Web->SendStaticFile( File => $file, Type => $type );
+
+$m->abort;
+</%INIT>
