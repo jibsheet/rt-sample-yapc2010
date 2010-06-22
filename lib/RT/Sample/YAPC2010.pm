@@ -6,6 +6,18 @@ use warnings;
 use strict;
 use Carp;
 
+$RT::Config::META{YourConfig} =
+{
+    Section         => 'General',
+    Overridable     => 1,
+    SortOrder       => 50,
+    Widget          => '/Widgets/Form/Boolean',
+    WidgetArguments => {
+        Description => 'Do it! or not.',  #loc
+    },
+};
+
+
 package RT::Interface::Web;
 no warnings 'redefine';
 sub WebCanonicalizeInfo {
