@@ -29,3 +29,26 @@
     qw/Kevin Bob User2/;
 
 
+@ScripActions = (
+    {
+        Name        => 'Set default CF values from requestor', 
+        ExecModule  => 'DefaultCustomFields',
+    },
+);
+
+@ScripConditions = (
+    {
+        Name                 => 'Department Change',
+        ApplicableTransTypes => 'Any',
+        ExecModule           => 'DepartmentChange'
+    }
+);
+
+@Scrips = (
+    {
+        Description    => 'Set values from Requestor',
+        ScripCondition => 'On Create',
+        ScripAction    => 'Set default CF values from requestor',
+        Template       => 'Blank',
+    },
+);
