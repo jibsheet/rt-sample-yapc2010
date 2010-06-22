@@ -1,5 +1,5 @@
 ---
-abstract: "[One line description of module's purpose here]"
+abstract: 'Sample module for a talk at YAPC::NA::2010'
 author:
   - 'Kevin Falcone  C<< <falcone@bestpractical.com> >>'
   - 'Kevin Falcone <falcone@bestpractical.com>'
