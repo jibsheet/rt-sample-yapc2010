@@ -1,5 +1,9 @@
 RT-Sample-YAPC2010 version 0.01
 
+This is simply a collection of sample code discussed during my presentation
+at YAPC::NA 2010 in Columbus OH
+http://yapc2010.com/yn2010/talk/2648
+
 How to install:
 
 1. perl Makefile.PL
